@@ -1,0 +1,997 @@
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+
+<html>
+    <head>
+        <style>
+        
+            html, body {
+                overflow-y: visible;
+                overflow-x: visible;
+            }
+
+            .hover_text:hover{
+                background: #aaf442;
+            }
+
+        </style>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/watch.js"></script>
+        <script src="js/popup.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+    </head>
+    <body style="background-color: purple">
+		
+        <div style = "z-index: 1000; position: fixed; width : 100% ; height : 125px; padding : 10px; background-color: #a041f4;">
+            <center><img src="images/geeksforgeeks-logo.png" align="middle"></center><hr>
+		</div>
+
+		<div style = "padding-top : 135px">
+        <div class="panel-group" id="accordion">
+            
+            <div class="panel panel-default" style="margin-right: 70px; margin-left: 70px;">
+                
+                <div class="panel-heading" >
+                    <a class="accordion-toggle panel-title" data-toggle="collapse" data-parent="#accordion" href="#algo">
+                        <h4 class="panel-title">
+                            ALGORITHMS<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                        </h4>
+                    </a>
+                </div>
+
+                <div id="algo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/analysis-of-algorithms/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Analysis of Algorithms</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/searching-and-sorting/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Sorting</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/divide-and-conquer/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Divide and Conquer</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/greedy-algorithms/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Greedy Algorithms</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/dynamic-programming/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Dynamic Programming</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/backtracking/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Backtracking</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/misc-2/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Misc</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/np-complete/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>NP Complete</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/searching/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Searching</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/analysis-of-algorithms-recurrences/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Analysis of Algorithms (Recurrences)</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/recursion/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Recursion</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/bit-algorithms/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Bit Algorithms</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/graph-traversals/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Graph Traversals</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/graph-shortest-paths/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Graph Shortest Paths</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/algorithms/graph-minimum-spanning-tree/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Graph Minimum Spanning Tree</span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default" style="margin-right: 70px; margin-left: 70px;">
+                <div class="panel-heading">
+                    <a class="accordion-toggle panel-title" data-toggle="collapse" data-parent="#accordion" href="#ds">
+                        <h4 class="panel-title">
+                            DATA STRUCTURES<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                        </h4>
+                    </a>
+                </div>
+                <div id="ds" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/data-structure/linked-list/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Linked List</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/data-structure/stack/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Stack</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/data-structure/queue/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Queue</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/data-structure/binary-trees/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Binary Trees</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/data-structure/tree-traversals/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Tree Traversals</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/data-structure/binary-search-trees/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Binary Search Trees</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/data-structure/balanced-binary-search-trees/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Balanced Binary Search Trees</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/data-structure/graph/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Graph</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/data-structure/hash/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Hash</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/data-structure/array/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Array</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/data-structure/misc-3/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Misc</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/data-structure/b-and-b-trees/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>B and B+ Trees</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/data-structure/heap/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Heap</span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default" style="margin-right: 70px; margin-left: 70px;">
+                <div class="panel-heading">
+                    <a class="accordion-toggle panel-title" data-toggle="collapse" data-parent="#accordion" href="#c">
+                        <h4 class="panel-title">
+                            C LANGUAGE<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                        </h4>
+                    </a>
+                </div>
+                <div id="c" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/input-and-output/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Input and Output</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/operators/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Operators</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/loops-control-structure/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Loops and Control Structure</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/structure-union/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Structure and Union</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/macro-preprocessor/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Macro and Preprocessor</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/arrays-pointers/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Arrays</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/pointers/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Pointer Basics</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/string/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>String</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/functions/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Functions</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/storage-classes/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Storage Classes and Type Qualifiers</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/data-types/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Data Types</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/dynamic-memory-allocation/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Dynamic Memory Allocation</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/misc/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Misc</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/advanced-pointer-c/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Advanced Pointer</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/variable-declaration-and-scope/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Variable Declaration and Scope</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-language-2/file-handling/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>File Handling</span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default" style="margin-right: 70px; margin-left: 70px;">
+                <div class="panel-heading">
+                    <a class="accordion-toggle panel-title" data-toggle="collapse" data-parent="#accordion" href="#cpp">
+                        <h4 class="panel-title">
+                            C++<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                        </h4>
+                    </a>
+                </div>
+                <div id="cpp" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/constructors/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Constructors</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/references/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>References</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/class-and-object/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Class and Object</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/misc-c/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Misc C++</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/destructors/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Destructors</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/operator-overloading/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Operator Overloading</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/this-pointer/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>this pointer</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/function-overloading-2/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Function Overloading and Default Arguments</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/static-keyword/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Static Keyword</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/friend-function-and-class/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>friend keyword</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/inheritance/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Inheritance</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/const-keyword/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>const keyword</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/new-and-delete/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>new and delete</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/virtual-functions/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Virtual Functions</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/templates/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Templates</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/c-plus-plus/exception-handling/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Exception Handling</span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			 <div class="panel panel-default" style="margin-right: 70px; margin-left: 70px;">
+                <div class="panel-heading">
+                    <a class="accordion-toggle panel-title" data-toggle="collapse" data-parent="#accordion" href="#os">
+                        <h4 class="panel-title">
+                            OPERATING SYSTEMS<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                        </h4>
+                    </a>
+                </div>
+				<div id="os" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/process-synchronization/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Process Management</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/cpu-scheduling/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>CPU Scheduling</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/memory-management/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Memory Management</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/deadlock/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Deadlock</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/iinput-output-systems/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Input Output System</span><br>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+
+
+             <div class="panel panel-default" style="margin-right: 70px; margin-left: 70px;">
+                <div class="panel-heading">
+                    <a class="accordion-toggle panel-title" data-toggle="collapse" data-parent="#accordion" href="#dbms">
+                        <h4 class="panel-title">
+                            DATABASE MANAGEMENT SYSTEMS<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                        </h4>
+                    </a>
+                </div>
+                <div id="dbms" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/process-synchronization/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>SQL</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/cpu-scheduling/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Normal Forms</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/memory-management/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Transaction and Concurrency Control</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/deadlock/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>ER and Relational Models</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/iinput-output-systems/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>File Structures</span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+
+
+            <div class="panel panel-default" style="margin-right: 70px; margin-left: 70px;">
+                <div class="panel-heading">
+                    <a class="accordion-toggle panel-title" data-toggle="collapse" data-parent="#accordion" href="#cn">
+                        <h4 class="panel-title">
+                            COMPUTER NETWORKS<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                        </h4>
+                    </a>
+                </div>
+                <div id="cn" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/process-synchronization/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Data Link Layer</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/cpu-scheduling/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Network Layer</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/memory-management/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>IP Addressing</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/deadlock/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Transport Layer</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/iinput-output-systems/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Application Layer</span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="panel panel-default" style="margin-right: 70px; margin-left: 70px;">
+                <div class="panel-heading">
+                    <a class="accordion-toggle panel-title" data-toggle="collapse" data-parent="#accordion" href="#cd">
+                        <h4 class="panel-title">
+                            COMPILER DESIGN<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                        </h4>
+                    </a>
+                </div>
+                <div id="cd" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/process-synchronization/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Lexical Analysis</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/cpu-scheduling/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Parsing and Syntax directed translation</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/memory-management/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Code generation and Optimization</span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="panel panel-default" style="margin-right: 70px; margin-left: 70px;">
+                <div class="panel-heading">
+                    <a class="accordion-toggle panel-title" data-toggle="collapse" data-parent="#accordion" href="#at">
+                        <h4 class="panel-title">
+                            AUTOMATA THEORY<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                        </h4>
+                    </a>
+                </div>
+                <div id="at" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/process-synchronization/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Regular language and Push Down Automata</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/cpu-scheduling/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Recursively enumerable sets and Turing machines</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/memory-management/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Context free languages and Push-down automata</span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="panel panel-default" style="margin-right: 70px; margin-left: 70px;">
+                <div class="panel-heading">
+                    <a class="accordion-toggle panel-title" data-toggle="collapse" data-parent="#accordion" href="#coa">
+                        <h4 class="panel-title">
+                            COMPUTER ORGANIZATION AND ARCHITECHTURE<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                        </h4>
+                    </a>
+                </div>
+                <div id="coa" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/process-synchronization/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Digital Logic and Number Representation</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/cpu-scheduling/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Computer Organization and Architecture</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/memory-management/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Number Representation</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/operating-systems/memory-management/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Microprocessor</span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="panel panel-default" style="margin-right: 70px; margin-left: 70px;">
+                <div class="panel-heading">
+                    <a class="accordion-toggle panel-title" data-toggle="collapse" data-parent="#accordion" href="#java">
+                        <h4 class="panel-title">
+                            JAVA<i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>
+                        </h4>
+                    </a>
+                </div>
+				
+                <div id="java" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/java/inheritance-2/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Inheritance</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/java/abstract-class-and-interface-in-java/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Abstract Class and Interface</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/java/arrays/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Arrays</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/java/data-types-2/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Data Types</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/java/constructors-2/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Constructors</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/java/exception-handling-2/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Exception Handling</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/java/packages/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Packages</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/java/class-and-object-2/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Class and Object</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/java/functions-2/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Functions</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/java/final-keyword/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>final keyword</span><br>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float:left">
+                                <input type="checkbox" style="margin: 5px 3px 0px 7px;" class="checkboxCategory" data-url="http://geeksquiz.com/java/operators/">
+                            </div>
+                            <div class="checkbox_text hover_text">
+                                <span>Operators</span><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-group pull-right" style="margin-right: 80px; margin-left: 50px; margin-bottom: 50px" role="group">
+            <div class="btn-group" role="group">
+                <button class="btn btn-danger" type="submit" id="submit">START TEST</button>
+            </div>
+        </div>
+
+		</div>
+
+        <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                        <h3 id="myModalLabel">Select Topics</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>Select atleast one topic from the list.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
