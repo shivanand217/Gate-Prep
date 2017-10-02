@@ -8,5 +8,3 @@ It is a Google chrome Extension that automatically pop up Subject wise test that
 
 It helps final and prefinal year CS , IT Undergraduates to test their Preperation of subjects of GATE(Graduate Aptitude Test Examination) Topics and It will also helpful for students to ace their placements.
 
-![Screen1](../master/screenshots/1.jpg)
-![Screen2](../master/screenshots/2.jpg)
